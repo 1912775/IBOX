@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <!-- Add your CSS styles here -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Add your custom styles for the calendar tab */
+        #calendar-tab {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #calendar-container {
+            display: none; /* Initially hide the calendar */
+        }
+    </style>
+</head>
+<body>
+    <!-- Calendar Tab -->
+    <div id="calendar-tab" onclick="toggleCalendar()">Calendar</div>
+
+    <!-- Calendar Container -->
+    <div id="calendar-container">
+        <!-- Add the embedded code for your Teamup Calendar here -->
+        <!-- Replace the URL below with your actual Teamup Calendar URL -->
+        <iframe src="https://teamup.com/c/8xp3tb" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <!-- Your other website content goes here -->
+
+    <!-- JavaScript to toggle the calendar visibility -->
+    <script>
+        function toggleCalendar() {
+            var calendarContainer = document.getElementById("calendar-container");
+            calendarContainer.style.display = (calendarContainer.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
